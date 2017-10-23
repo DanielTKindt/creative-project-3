@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="formCtrl">
+  <form ng-submit="sendSMS(user.firstName, user.lastName, user.phoneNum)">
+    First Name:<br>
+    <input type="text" ng-model="user.firstName"><br>
+    Last Name:<br>
+    <input type="text" ng-model="user.lastName">
+    Phone Number:<br>
+    <input type="text" ng-model="user.phoneNum">
+    <br><br>
+    <button ng-click="reset()">Reset Fields</button>
+    <input type="submit" id="submit" value="Send Text" />
+  </form>
+  <p>response = {{responseMSG}}</p>
+  <p>master = {{master}}</p>
+  <p>error = {{error}}</p>
+</div>
+</body>
+</html>
+
+
